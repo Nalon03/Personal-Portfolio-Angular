@@ -1,0 +1,44 @@
+@use "@angular/material" as mat;
+@import "./themes/purpletheme.css";
+
+$compact-theme: mat.define-theme(
+  (
+    density: (
+      scale: -2,
+    ),
+  )
+);
+
+:root {
+  @include mat.toolbar-overrides(
+    (
+      container-background-color: var(--mat-sys-primary),
+      container-text-color: var(--mat-sys-on-primary),
+    )
+  );
+  @include mat.form-field-density($compact-theme);
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+// $theme: mat.define-theme(
+//     (
+//         color:(
+//             theme-type: dark,
+//             primary:mat.$blue-palette,
+//         )
+//     )
+// );
+
+// html{
+//     @include mat.core-theme($theme);
+//     @include mat.all-component-themes($theme);
+// }

@@ -1,0 +1,28 @@
+<div class="form-wrapper">
+  <h1>Contact Me</h1>
+  <form [formGroup]="contactForm" (ngSubmit)="submit()">
+    <div class="formContainer">
+      <mat-form-field appearance="outline">
+        <mat-label> First Name </mat-label>
+        <input matInput formControlName="firstName" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label> Last Name </mat-label>
+        <input matInput formControlName="lastName" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label> Email </mat-label>
+        <input matInput formControlName="email" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label> Message </mat-label>
+        <textarea
+          class="textarea"
+          matInput
+          formControlName="message"
+        ></textarea>
+      </mat-form-field>
+    </div>
+    <button class="submit-button" mat-flat-button>Submit Message</button>
+  </form>
+</div>

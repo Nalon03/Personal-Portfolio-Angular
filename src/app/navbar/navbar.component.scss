@@ -1,0 +1,12 @@
+// @use '@angular/material' as mat;
+// @use './../../themes/sea-bluetheme.css';
+
+.toolbar-bg {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  padding-inline: 50px;
+}
+.toolbar-btns {
+  font-size: 16px;
+}

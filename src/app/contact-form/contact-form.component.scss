@@ -1,0 +1,25 @@
+@use "@angular/material" as mat;
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+  width: 100vw;
+}
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+mat-form-field {
+  width: 450px;
+}
+
+.mat-mdc-form-field-textarea-control {
+  height: 120px !important ;
+}
+.submit-button{
+  margin-top: 25px;
+}

@@ -1,0 +1,92 @@
+@use "@angular/material" as mat;
+:root {
+  --white-color: #ffffff;
+}
+
+.home-parent-wrapper {
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-wrapper {
+  width: 35%;
+  margin: 15px;
+
+  @include mat.card-overrides(
+    (
+      elevated-container-color: --white-color,
+      elevated-container-elevation: none,
+    )
+  );
+}
+
+.content {
+  font-weight: 400;
+  line-height: 2;
+}
+
+.title {
+  letter-spacing: 4px;
+  font-weight: bolder;
+  font-size: 39px;
+  line-height: 1.5;
+  font-family: "Work Sans", sans-serif;
+  color: #341338;
+}
+
+.contact-btn {
+  margin-top: 45px;
+  width: 35%;
+}
+
+.image-card {
+  margin: 15px;
+ 
+  @include mat.card-overrides(
+    (
+      elevated-container-color: --white-color,
+    )
+  );
+}
+
+.prof-img {
+  height: 570px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.other-details-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 20%;
+}
+
+.details-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18%;
+  height: 85px;
+  @include mat.card-overrides(
+    (
+      elevated-container-color: --mat-sys-surface-bright,
+    )
+  );
+}
+
+.bold-content {
+  font-weight: bold;
+  font-size: 23px;
+}
+
+.image-wrapper {
+  margin-top: 8%;
+}

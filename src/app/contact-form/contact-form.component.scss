@@ -1,25 +1,69 @@
 @use "@angular/material" as mat;
 
+html,
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 .form-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 85vh;
-  width: 100vw;
+  min-height: 85vh;
+  max-width: 100vw; 
+  padding: 20px;
+  margin: 0 auto;
 }
+
 .formContainer {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  max-width: 100%;
+  margin: 0 auto; 
 }
+
 mat-form-field {
-  width: 450px;
+  width: 500px; 
 }
 
 .mat-mdc-form-field-textarea-control {
-  height: 120px !important ;
+  height: 120px !important;
 }
-.submit-button{
+
+.submit-button {
   margin-top: 25px;
+  align-self: center; 
+  width: auto;
+  max-width: 200px;
+}
+
+@media (max-width: 550px) {
+  .form-wrapper {
+    min-height: auto; 
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  mat-form-field {
+    width: 100%;
+  }
+
+  .submit-button {
+    margin-top: 20px;
+    align-self: center;
+    width: auto;
+    max-width: 200px;
+  }
 }

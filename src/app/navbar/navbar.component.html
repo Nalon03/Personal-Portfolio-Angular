@@ -1,9 +1,38 @@
 <mat-toolbar class="toolbar-bg">
+  <button
+    (click)="toggleMenu()"
+    class="toolbar-btns menu-icons mat-icon-button"
+  >
+    <mat-icon>Menu</mat-icon>
+  </button>
+
   <span class="toolbar-buttons-wrapper">
-    <button (click)="navigateHome()" class="toolbar-btns" mat-flat-button>Home</button>
-    <button (click)="navigateAbout()" class="toolbar-btns" mat-flat-button>About</button>
-    <button (click)="navigatePortfolio()" class="toolbar-btns" mat-flat-button>Portfolio</button>
-    <button (click)="navigateExperience()" class="toolbar-btns" mat-flat-button>Experience</button>
-    <button (click)="navigateBlog()" class="toolbar-btns" mat-flat-button>Blogs</button>
+    <button (click)="navigateHome()" class="toolbar-btns" mat-flat-button>
+      Home
+    </button>
+    <button (click)="navigateAbout()" class="toolbar-btns" mat-flat-button>
+      About
+    </button>
+    <button (click)="navigatePortfolio()" class="toolbar-btns" mat-flat-button>
+      Portfolio
+    </button>
+    <button (click)="navigateExperience()" class="toolbar-btns" mat-flat-button>
+      Experience
+    </button>
+    <button (click)="navigateBlog()" class="toolbar-btns" mat-flat-button>
+      Blogs
+    </button>
   </span>
 </mat-toolbar>
+
+<div *ngIf="isMenuOpen" class="dropdown-menu">
+  <button (click)="navigateHome(); toggleMenu()" mat-button>Home</button>
+  <button (click)="navigateAbout(); toggleMenu()" mat-button>About</button>
+  <button (click)="navigatePortfolio(); toggleMenu()" mat-button>
+    Portfolio
+  </button>
+  <button (click)="navigateExperience(); toggleMenu()" mat-button>
+    Experience
+  </button>
+  <button (click)="navigateBlog(); toggleMenu()" mat-button>Blogs</button>
+</div>

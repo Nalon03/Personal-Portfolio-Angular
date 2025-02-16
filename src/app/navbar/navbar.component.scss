@@ -1,12 +1,53 @@
-// @use '@angular/material' as mat;
-// @use './../../themes/sea-bluetheme.css';
-
 .toolbar-bg {
-  display: flex;
-  flex-direction: row;
   justify-content: end;
-  padding-inline: 50px;
+  position: relative;
 }
-.toolbar-btns {
-  font-size: 16px;
+.toolbar-buttons-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.menu-icons {
+  display: none;
+}
+
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--mat-sys-primary);
+  padding: 10px;
+  position: absolute;
+  top: 56px;
+  right: 0;
+  left: auto;
+  z-index: 1000;
+  width: 25%;
+  max-width: 250px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu button {
+  text-align: left;
+  color: var(--mat-sys-on-primary);
+  border: none;
+  background: none;
+}
+
+@media (max-width: 600px) {
+  .toolbar-buttons-wrapper {
+    display: none;
+  }
+  .menu-icons {
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 601px) {
+  .toolbar-buttons-wrapper {
+    display: flex;
+  }
+
+  .menu-icons {
+    display: none;
+  }
 }
